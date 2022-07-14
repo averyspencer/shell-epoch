@@ -1,15 +1,15 @@
 # shell-epoch
 Convert unix epoch time to either UTC or local time in pure bourne shell
 
+Want to use Windows' cmd.exe for some reason? Take a look at my other repository, [batch-epoch](https://github.com/averyspencer/batch-epoch)
+
 Results are output in ISO 8601 date/time format
 
 # usage examples
-
+    $ # Should be July 14th, 2022 at 2:06:44 PM
+    $ ./shell-epoch.sh 1657764404
+    2022-07-14T02:06:44Z
+    $ # Current time will vary
     $ ./shell-epoch.sh $(date +%s)
-    2022-07-05T13:01:03Z
-    $ ./shell-epoch.sh $(date +%s) local
-    2022-07-05T09:01:18-04:00
-    $ ./shell-epoch.sh $(date +%s) utc
-    2022-07-05T13:01:33Z
-    $ ./shell-epoch.sh $(date +%s) DEADBEEF
-    2022-07-05T13:01:42Z
+    2022-07-14T03:23:05Z
+ 
