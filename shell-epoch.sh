@@ -130,7 +130,7 @@ calc_month_left_to_subtract()
     elif test $cur_month -eq 2
     then
         calc_leap_year
-        if test is_leap_year = yes
+        if test $is_leap_year = yes
         then
             if test $cur_day -ge $DAYS_IN_FEBRUARY_LEAP
             then
@@ -319,7 +319,7 @@ do
     calc_hour_left_to_subtract
 done
 
-cur_minute=1
+cur_minute=0
 calc_minute_left_to_subtract
 while test $is_minute_left_to_subtract = yes
 do
